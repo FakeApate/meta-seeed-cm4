@@ -68,7 +68,7 @@ local_conf_header:
     CONF_VERSION = "2"
     PACKAGE_CLASSES = "package_ipk"
     INIT_MANAGER = "systemd"
-    LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
+    LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch commercial"
 
   mender-artifact: |
     MENDER_ARTIFACT_NAME = "gha_autobuild"
@@ -92,7 +92,7 @@ local_conf_header:
     IMAGE_INSTALL:append = " seeed-linux-dtoverlays"
 
     # Install required packages
-    IMAGE_INSTALL:append = " watchdog"
+    IMAGE_INSTALL:append = " watchdog ffmpeg v4l-utils"
 
     # Enable SSH server with openssh
     IMAGE_FEATURES:append = " ssh-server-openssh"
