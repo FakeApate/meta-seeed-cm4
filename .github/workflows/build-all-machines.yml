@@ -65,34 +65,6 @@ jobs:
             ---
             *Built with GitHub Actions using KAS automation*
 
-      - name: build seeed-recomputer-r100x image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-          workflow: seeed-yocto-boards-build
-          token: ${{ secrets.GITHUB_TOKEN }}
-          inputs: >-
-                {
-                    "machine": "seeed-recomputer-r100x-mender", 
-                    "build_type": "${{ inputs.build_type }}", 
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }}, 
-                    "clean_build": ${{ inputs.clean_build }}, 
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
-      - name: build seeed-recomputer-r110x image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-          workflow: seeed-yocto-boards-build
-          token: ${{ secrets.GITHUB_TOKEN }}
-          inputs: >-
-                {
-                    "machine": "seeed-recomputer-r110x-mender", 
-                    "build_type": "${{ inputs.build_type }}", 
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }}, 
-                    "clean_build": ${{ inputs.clean_build }}, 
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
       - name: build seeed-reterminal image
         uses: benc-uk/workflow-dispatch@v1.1
         with:
@@ -101,62 +73,6 @@ jobs:
             inputs: >-
                 {
                     "machine": "seeed-reterminal-mender",
-                    "build_type": "${{ inputs.build_type }}",
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }},
-                    "clean_build": ${{ inputs.clean_build }},
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
-      - name: build seeed-reterminal-DM image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-            workflow: seeed-yocto-boards-build
-            token: ${{ secrets.GITHUB_TOKEN }}
-            inputs: >-
-                {
-                    "machine": "seeed-reterminal-DM-mender",
-                    "build_type": "${{ inputs.build_type }}",
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }},
-                    "clean_build": ${{ inputs.clean_build }},
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
-      - name: build seeed-rerouter-cm4 image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-            workflow: seeed-yocto-boards-build
-            token: ${{ secrets.GITHUB_TOKEN }}
-            inputs: >-
-                {
-                    "machine": "seeed-rerouter-cm4-mender",
-                    "build_type": "${{ inputs.build_type }}",
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }},
-                    "clean_build": ${{ inputs.clean_build }},
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
-      - name: build seeed-recomputer-r2x image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-            workflow: seeed-yocto-boards-build
-            token: ${{ secrets.GITHUB_TOKEN }}
-            inputs: >-
-                {
-                    "machine": "seeed-recomputer-r2x-mender",
-                    "build_type": "${{ inputs.build_type }}",
-                    "disable_upload_downloads": ${{ inputs.disable_upload_downloads }},
-                    "clean_build": ${{ inputs.clean_build }},
-                    "tag_name": "${{ env.TAG_NAME }}"
-                }
-
-      - name: build seeed-recomputer-r22 image
-        uses: benc-uk/workflow-dispatch@v1.1
-        with:
-            workflow: seeed-yocto-boards-build
-            token: ${{ secrets.GITHUB_TOKEN }}
-            inputs: >-
-                {
-                    "machine": "seeed-recomputer-r22-mender",
                     "build_type": "${{ inputs.build_type }}",
                     "disable_upload_downloads": ${{ inputs.disable_upload_downloads }},
                     "clean_build": ${{ inputs.clean_build }},
