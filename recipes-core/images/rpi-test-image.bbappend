@@ -1,6 +1,6 @@
 INHERIT:append = " \
 	populate_sdk_qt5 \
-
+	"
 # Set root password for core-image-minimal
 # This bbappend adds SSH access with default password "seeed"
 
@@ -10,7 +10,7 @@ set_root_passwd() {
 }
 
 # Add the function to the post-process commands
-ROOTFS_POSTPROCESS_COMMAND:append = " set_root_passwd; "	"
+ROOTFS_POSTPROCESS_COMMAND:append = " set_root_passwd; "
 
 SPLASH = "psplash-raspberrypi"
 
