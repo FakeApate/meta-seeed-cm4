@@ -124,7 +124,9 @@ local_conf_header:
     # Mender specific configurations for reTerminal
     MENDER_ARTIFACT_NAME = "reterminal-release-scarthgap"
     MENDER_BOOT_PART_SIZE_MB = "64"
-    MENDER_STORAGE_TOTAL_SIZE_MB = "2048"
+    MENDER_STORAGE_TOTAL_SIZE_MB = "8192"
+    MENDER_ROOTFS_PART_SIZE_MB = "2048"
+    MENDER_DATA_PART_SIZE_MB = "1024"
     MENDER_FEATURES_ENABLE:append = " mender-uboot mender-image-sd"
     MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi"
 
